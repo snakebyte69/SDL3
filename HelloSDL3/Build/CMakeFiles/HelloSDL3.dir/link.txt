@@ -1,0 +1,1 @@
+/opt/homebrew/bin/gcc-14  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/HelloSDL3.dir/HelloSDL3.c.o -o HelloSDL3  /opt/local/lib/libSDL3.0.dylib

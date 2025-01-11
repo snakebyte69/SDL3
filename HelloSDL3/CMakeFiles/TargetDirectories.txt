@@ -1,0 +1,3 @@
+/Users/snake/Data/Code/SDL/SDL3/HelloSDL3/CMakeFiles/HelloSDL3.dir
+/Users/snake/Data/Code/SDL/SDL3/HelloSDL3/CMakeFiles/edit_cache.dir
+/Users/snake/Data/Code/SDL/SDL3/HelloSDL3/CMakeFiles/rebuild_cache.dir

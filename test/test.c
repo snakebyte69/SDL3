@@ -3,16 +3,16 @@
 
 int main() {
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
-        const char *error = SDL_GetError();
-        if (error && *error) {
-            SDL_Log("SDL Failed to initialize: %s", error);
-        } else {
-            SDL_Log("SDL Failed to initialize, but no error message was provided.");
-        }
+        fprintf(stderr, "SDL Initialization Failed: %s\n", SDL_GetError());
         return 1;
     }
 
-    printf("SDL Initialized Successfully!\n");
+    const char *video_driver = SDL_GetCurrentVideoDriver();
+    if (video_driver) {
+        printf("Using video driver: %s\n", video_driver);
+    } else {
+        printf("No video driver initialized!\n");
+    }
 
     SDL_Quit();
     return 0;

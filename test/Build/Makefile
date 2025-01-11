@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/local/bin/cmake
+CMAKE_COMMAND = /Applications/CMake.app/Contents/bin/cmake
 
 # The command to remove a file.
-RM = /opt/local/bin/cmake -E rm -f
+RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/snake/Data/Code/SDL/SDL3/HelloSDL3
+CMAKE_SOURCE_DIR = /Users/snake/Data/Code/SDL/SDL3/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/snake/Data/Code/SDL/SDL3/HelloSDL3
+CMAKE_BINARY_DIR = /Users/snake/Data/Code/SDL/SDL3/test/Build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/snake/Data/Code/SDL/SDL3/HelloSDL3
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/opt/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CMake.app/Contents/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/opt/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CMake.app/Contents/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/snake/Data/Code/SDL/SDL3/HelloSDL3/CMakeFiles /Users/snake/Data/Code/SDL/SDL3/HelloSDL3//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/snake/Data/Code/SDL/SDL3/test/Build/CMakeFiles /Users/snake/Data/Code/SDL/SDL3/test/Build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/snake/Data/Code/SDL/SDL3/HelloSDL3/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/snake/Data/Code/SDL/SDL3/test/Build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HelloSDL3
+# Target rules for targets named test
 
 # Build rule for target.
-HelloSDL3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HelloSDL3
-.PHONY : HelloSDL3
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-HelloSDL3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloSDL3.dir/build.make CMakeFiles/HelloSDL3.dir/build
-.PHONY : HelloSDL3/fast
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
-HelloSDL3.o: HelloSDL3.c.o
-.PHONY : HelloSDL3.o
+test.o: test.c.o
+.PHONY : test.o
 
 # target to build an object file
-HelloSDL3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloSDL3.dir/build.make CMakeFiles/HelloSDL3.dir/HelloSDL3.c.o
-.PHONY : HelloSDL3.c.o
+test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.o
+.PHONY : test.c.o
 
-HelloSDL3.i: HelloSDL3.c.i
-.PHONY : HelloSDL3.i
+test.i: test.c.i
+.PHONY : test.i
 
 # target to preprocess a source file
-HelloSDL3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloSDL3.dir/build.make CMakeFiles/HelloSDL3.dir/HelloSDL3.c.i
-.PHONY : HelloSDL3.c.i
+test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.i
+.PHONY : test.c.i
 
-HelloSDL3.s: HelloSDL3.c.s
-.PHONY : HelloSDL3.s
+test.s: test.c.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-HelloSDL3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloSDL3.dir/build.make CMakeFiles/HelloSDL3.dir/HelloSDL3.c.s
-.PHONY : HelloSDL3.c.s
+test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.s
+.PHONY : test.c.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HelloSDL3"
-	@echo "... HelloSDL3.o"
-	@echo "... HelloSDL3.i"
-	@echo "... HelloSDL3.s"
+	@echo "... test"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 
